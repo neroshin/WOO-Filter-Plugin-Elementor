@@ -1,0 +1,16 @@
+{
+  "name": "wordpress-react",
+  "version": "0.0.1",
+  "description": "Wordpress React",
+  "main": "index.php",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "wp-scripts build",
+    "start": "wp-scripts start"
+  },
+  "author": "unknown",
+  "license": "ISC",
+  "devDependencies": {
+    "@wordpress/scripts": "^26.4.0"
+  }
+}

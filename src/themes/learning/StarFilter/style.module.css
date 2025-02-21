@@ -1,0 +1,52 @@
+
+.filterTitle {
+  font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.starList {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.starItem {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+
+.starItem:hover {
+  background-color: #f0f0f0;
+}
+
+.checkbox {
+  margin-right: 8px;
+}
+
+.starRating {
+  display: flex;
+  align-items: center;
+}
+
+.star {
+  color: #ffd700;
+  font-size: 18px;
+  margin-right: 2px;
+}
+
+.emptystar {
+  color: #d4d4d4;
+  font-size: 18px;
+  margin-right: 2px;
+}
+
+.ratingText {
+  margin-left: 8px;
+  font-size: 14px;
+  color: #666;
+}
+

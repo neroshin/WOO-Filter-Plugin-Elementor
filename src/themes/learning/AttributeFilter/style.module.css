@@ -1,0 +1,23 @@
+
+
+.filterSection {
+  margin-bottom: 20px;
+}
+
+.filterTitle {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.attributeList {
+  list-style-type: none;
+  padding: 0;
+}
+
+.attributeItem {
+  margin-bottom: 5px;
+}
+
+

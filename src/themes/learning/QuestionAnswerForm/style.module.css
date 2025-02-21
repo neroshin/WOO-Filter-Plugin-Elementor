@@ -1,0 +1,67 @@
+
+.questionContent   {
+    margin-bottom: 20px;
+}
+.questionContent h2  {
+    display: block;
+    margin-bottom: 40px;
+    text-align: center;
+    color: #2c3e50;
+}
+.answers {
+    display: grid;
+    gap: 10px;
+}
+.answer {
+    background: #16ca92!important;
+    border: 1px solid #dee2e6!important;
+    border-radius: 4px!important;
+    padding: 10px!important;
+    cursor: pointer!important;
+    transition: background-color 0.3s ease!important;
+    box-shadow: none !important;
+    color: black !important;
+}
+
+.answer:hover {
+    background-color: #16ca91cb !important;
+    border: solid #b0b0b0 1px !important;
+}
+
+.answer.selected {
+    background-color: #d4edda!important;
+    border-color: #c3e6cb!important;
+}
+/* Button styles */
+.ChoiceBtn {
+    display: inline-block;
+    background-color: #3498db;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+.ChoiceBtn:hover {
+    background-color: #2980b9;
+}
+
+.ChoiceBtn:disabled {
+    background-color: #95a5a6;
+    cursor: not-allowed;
+}
+.questionContent input[type="radio"], .questionContent  input[type="email"] {
+    margin-bottom: 10px;
+}
+.questionContent input[type="email"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+.qdf_button{
+    width: 50%;
+    margin: auto;
+}

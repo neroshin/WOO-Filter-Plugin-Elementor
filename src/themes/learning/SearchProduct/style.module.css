@@ -1,0 +1,39 @@
+.filterSection {
+  margin-bottom: 20px;
+}
+
+.searchContainer {
+  padding: 16px;
+  background-color: #f8f8f8;
+  border-radius: 8px;
+}
+
+.filterTitle {
+  font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.searchInput {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  padding: 8px 12px;
+  margin-bottom: 16px;
+}
+
+.searchInput input {
+  flex-grow: 1;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  margin-left: 8px;
+}
+
+.searchResults {
+  max-height: 400px;
+  overflow-y: auto;
+}

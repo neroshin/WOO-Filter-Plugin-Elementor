@@ -1,0 +1,37 @@
+
+.categoryGrid {
+  list-style-type: none;
+
+  gap: 15px;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+  
+    padding: 10px;
+}
+
+.categoryItem {
+  display: flex;
+  align-items: flex-end;
+    justify-content: center;
+  margin-bottom: 5px;
+  min-width: 165px;
+  min-height: 165px;
+  background-size: cover;
+  background-position: center;
+  font-size: 20px;
+}
+
+.categoryLink {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  padding-bottom: 10px;
+  font-weight: 600;
+}
+
+.categoryLink:hover {
+  color: #000;
+}
+.activeCat{
+  border:2px solid rgb(138, 138, 138);
+}

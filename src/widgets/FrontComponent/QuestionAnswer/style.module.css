@@ -1,0 +1,151 @@
+.sidebar {
+ 
+}
+
+.filterSection {
+  margin-bottom: 20px;
+}
+
+.filterTitle {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+
+.noFoundItem{
+  text-align: center;
+  width: 100%;
+}
+
+
+.productList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* 
+#surveyForm{
+   
+}
+
+.question {
+    display: none;
+}
+.question.active {
+    display: block;
+}
+.button{
+    margin-right: 12px;
+}
+#question3{
+  display: flex;
+    gap: 10px;
+   
+    justify-content: center;
+    margin: auto;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    border-top: 5px solid #16ca92;
+    text-align: center;
+    padding: 40px 34px;
+   
+    width: auto;
+}
+.gobackbtn{
+    float: right;
+    margin: 17px;
+    margin-right: 0;
+    cursor: pointer;
+}
+#email{
+  background: #f8f9fa !important;
+    border: 1px solid #dee2e6 !important;
+    border-radius: 4px !important;
+    padding: 10px !important;
+    cursor: pointer !important;
+    transition: background-color 0.3s ease !important;
+    box-shadow: none !important;
+    color: black !important;
+    width: 100%;
+    font-size: 18px;
+}
+.tooltip_text {
+    
+    position: absolute;
+    z-index: 2;
+    width: 230px;
+    color: white;
+    font-size: 12px;
+    background-color: #192733;
+    border-radius: 10px;
+    padding: 10px 15px 10px 15px;
+  
+
+  }
+ 
+  .tooltip_text::before {
+    content: "";
+    position: absolute;
+    transform: rotate(45deg);
+    background-color: #192733;
+    padding: 5px;
+    z-index: 1;
+  }
+  .hover_text{
+    position: relative;
+    display: inline;
+  }
+  .hover_text:hover .tooltip_text {
+    visibility: visible;
+  }
+  
+  #top {
+    top: -84px;
+    left: 10px;
+  }
+ 
+  .inputPosition{
+    width: 83%;
+  }
+  .inputPosition #top{
+    top: -64px;
+    left: 0!important;
+  }
+  #top::before {
+    top: 90%;
+    left: 16%;
+  }
+
+ .submit{
+  
+ }
+
+ @media (max-width: 426px) {
+    #question3{
+        width: 97%;
+    }
+ }
+ */
+
+
+
+
+
+
+
+ 

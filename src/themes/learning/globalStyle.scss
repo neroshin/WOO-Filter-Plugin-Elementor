@@ -1,0 +1,14 @@
+.loading .productItem{
+   
+    position: relative;
+ 
+}
+.loading .productItem:before{
+    content: "";
+    display: block;
+    height: 115%;
+    width: 100%;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.574);
+    z-index: 99;
+}

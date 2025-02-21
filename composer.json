@@ -1,0 +1,22 @@
+{
+	 "description": "",
+    "type": "wp-project",
+    "license": "GPL",
+    "authors": [
+        {
+            "name": "wordpress-react",
+            "email": "Unknown@Unknown.de",
+            "homepage": "https://www.Unknown.de",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^7.6"
+    },
+	"autoload": {
+       "psr-4": {"Includes\\": "includes"},
+	   "classmap": ["includes/"]
+    }
+	
+
+}

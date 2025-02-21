@@ -1,0 +1,9 @@
+.countdownContainer{
+  text-align: center;
+}
+.countdownNumber{
+  font-size: 23px;
+  font-weight: bold;
+  display: inline-block;
+  color: red;
+}
