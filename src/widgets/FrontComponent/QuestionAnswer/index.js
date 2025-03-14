@@ -30,7 +30,7 @@ export default ({title , repeaterSetting , isTargetHtml , variationPopup}) => {
     const [products , setProducts] = useState([]);
     const [totalPages, setTotalPages] = useState(0);
     const [totalProducts, setTotalProducts] = useState(0);
-    const [filterMemory, setFilterMemory] =useState({});
+    const [filterMemory, setFilterMemory] =useState(null);
     const [productLoading, setProductLoading] =useState(false);
     const [productVariations, setProductVariations] = useState({visible:false});
 
@@ -213,17 +213,7 @@ export default ({title , repeaterSetting , isTargetHtml , variationPopup}) => {
            
         }
 
-        // console.log(selected);
-    /* 
-        const filter = (prevFilterMemory) => {
-             const updatedAttributes = {
-                 ...prevFilterMemory.attributes,
-                 [taxonomy]: attributes,
-               }
- 
-               return {...prevFilterMemory ,attributes : updatedAttributes};
-         } */
- 
+   
          setFilterMemory( {...filterMemory , stars : selected , page : 0});
          setCurrentPage(1);
         //  setProductLoading(true);
@@ -316,12 +306,14 @@ export default ({title , repeaterSetting , isTargetHtml , variationPopup}) => {
 
       const fetchProducts = useCallback(async (filters) => {
         setProductLoading(true)
-        console.log("fasdgasdfasd");
+        console.log(filters , "filtersfiltersfilters");
         try {
+          
           const filterParam = {
             ...filters,
             attributes: JSON.stringify(filters.attributes ?? "[]"),
             stars: JSON.stringify(filters.stars ?? "[]"),
+           
           }
           const params = new URLSearchParams(filterParam)
           const response = await api.get(`/products?${params.toString()}`)
@@ -337,35 +329,39 @@ export default ({title , repeaterSetting , isTargetHtml , variationPopup}) => {
 
 
       useEffect(()=>{
-        // console.log("filter trigger");
-        fetchProducts(filterMemory)
-       /*  const filterParam = {
-            ...filterMemory , 
-            attributes : JSON.stringify(filterMemory.attributes??"[]") ,
-            stars : JSON.stringify(filterMemory.stars??"[]"),
-            
+
+        
+        if(filterMemory !== null){
+            console.log("repeaterSettingFieldsrepeaterSettingFieldsrepeaterSettingFieldsrepeaterSettingFieldsrepeaterSettingFieldsrepeaterSettingFields");
+            fetchProducts(filterMemory)
         }
       
-       
-        const params = new URLSearchParams(filterParam);
-        api.get(`/products?${ params.toString() }` , 
-            ).then(res=>{
-                // console.log(res)
-                setTotalPages(res.headers.get("X-WP-TotalPages") );
-                setTotalProducts(res.headers.get("X-WP-Total") );
-                setProducts(res.data); 
-                setProductLoading(false);
-        });  */
+
+
+
 
     },[filterMemory])
 
 
     useEffect(()=>{
 
-        getProducts();
+        // getProducts();
         categoryTermById();
     },[])
 
+    useEffect(()=>{
+
+        const defaultFilter = repeaterSettingFields.reduce((carry , item)=>{
+            if(item.filter_type === "tags" && item.tag_default_Selected !== undefined){
+                carry['tag_id'] = splitAtFirstUnderscore(item.tag_default_Selected)
+            }
+            return carry;
+        } , [])
+      
+        console.log(defaultFilter , "defaultFilterdefaultFilterdefaultFilterdefaultFilter");
+
+        setFilterMemory({...filterMemory , ...defaultFilter})
+    },[])
  
     useEffect(()=>{
         // console.log(isTargetHtml , "isTargetHtmlisTargetHtml");

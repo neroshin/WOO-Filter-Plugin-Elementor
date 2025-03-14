@@ -27,9 +27,11 @@ class WooAjaxFilterElementor extends Widget_Base{
 		$wooHelper = new WooHelper();
 		
 
-	/* 	$terms = get_terms( 'product_tag' );
-		print_r($terms);
-		exit; */
+		
+
+	// $terms =  $wooHelper->getProductTags( );
+	// 	print_r($terms);
+	// 	exit; 
 
         $this->start_controls_section(
             'content_section_title',
@@ -175,6 +177,18 @@ class WooAjaxFilterElementor extends Widget_Base{
 						'type' => Controls_Manager::SELECT2,
 						'label_block' => true,
 						'multiple' => true,
+						'options' =>  $wooHelper->getProductTags(),
+						'default' => [],
+						'condition' => [
+							'filter_type' => 'tags',
+						],
+					],
+					[
+						'name' => 'tag_default_Selected',
+						'label' => esc_html__( 'Select Defualt', 'textdomain' ),
+						'type' => Controls_Manager::SELECT,
+						'label_block' => true,
+						'multiple' => false,
 						'options' =>  $wooHelper->getProductTags(),
 						'default' => [],
 						'condition' => [
